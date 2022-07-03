@@ -1,0 +1,96 @@
+\section{Contexte}
+\subsection{Au commencement}
+Il y a fort, fort longtemps\footnote{Exactement 6 jours, 4 heures et 57 minutes}, dans un monde pas si lointain, vivait un peuple du nom de Prolo.
+
+Ses éminents représentants étaient réputés pour leur beauté à nulle autre pareille et leur élégance époustouflante. Personne n'avait jamais vu d'aussi jolis spécimens : ils étaient la fine fleur de leur espèce. 
+
+Hélas, ce peuple ne parvenait pas à prospérer. Leurs terres étaient devenues arides, les pluies se faisaient rares, et même le soleil semblait les bouder. Ayant toujours été sédentaires, ils dépérissaient, leurs pétales fanaient, et leurs feuilles flétrissaient bien avant l'automne. 
+
+Pas question de prendre racine dans cet endroit maudit ! Il en allait de leur survie. La décision fut prise : pour la première fois de leur histoire, les Prolotistes allaient prendre leur courage à deux mains, sortir leurs pots\footnote{Moyen de transport agréé SNCF} et se lever de leur terre natale pour sautiller vers l'avenir.
+
+\subsection{Un nouveau monde}
+Après moultes péripéties qu'il serait trop long de raconter ici\footnote{Impliquant un arrosoir, une rousse, des costumes étranges et une pièce de théâtre improvisée}, nos chers Prolotistes parviennent à un jardin de forme singulière : un grand potager en carré, muni de ressources en abondance ! 
+
+Chacune des cases est riche en une ressource en particulier : une substance chimique très stable, du rayonnement électromagnétique émis par un astre céleste, et une énergie thermique assez élevée. Un paradis très propice à la création de magnifiques champs de fleurs ! 
+%TODO : photo
+\newpage
+
+\subsection{Oups, des ennuis}
+Bien sûr, tout cela était bien trop beau, et alors qu'ils prennent leurs quartiers, on vient marcher sur leurs plates-bandes. Les intrus, répondant au nom peu élégant de peuple Tafili\footnote{En langue commune, "parasite"}, arrivent en sautillant de façon très disgracieuse au jardin où les Prolotistes commençent à s'installer. Loin de vouloir partager les lieux, ils semblent vouloir couper l'herbe sous le pied des précédents occupants pour profiter seuls de cet havre de paradis. Qui plus est, ils ont osé les traiter de mauvaises herbes ! 
+
+Verts de rage, les Prolotistes ne sont absolument pas prêts à céder leur terrain si durement gagné cinq minutes plus tôt. Les plantes, ce n'est pas belliqueux, c'est même plutôt fleur bleue... Mais il en va de leur survie ! Il est temps de montrer à ces Tafili mal rempotés que toute rose a aussi des épines.
+
+\subsection{Votre mission}
+Heureusement, vous veillez au grain ! Désigné volontaire par une assemblée exceptionnelle rassemblée pour assurer la victoire du peuple Prolo, vous voilà général des armées\footnote{Assorti du titre honorifique de Jardinier En Chef}. Votre objectif est de faire manger les pissenlits par la racine à vos adversaires lors de la bataille des Baffles Fleuries, qui débutera Vendredi à 13h42. Pour ce faire, vous devrez gérer les effectifs de vos armées. Mais surtout, au milieu de toute cette violence, n'oubliez pas que vous restez des plantes belles et délicates... Le vainqueur sera déterminé par un score d'élégance !
+
+\section{Déroulement de l'affrontement}
+
+\subsection{Champ de bataille}
+Le jardin, fruit de toutes les convoitises, servira ici de champ de bataille.
+Afin de faciliter le déroulement de l'escarmouche, il sera divisé en une grille qui sera toujours de même taille : 20 x 20.
+% Taille fixe: 20 x 20
+
+\subsection{Ressources}
+
+Vos fleurs ont besoin pour se reproduire de certaines richesses. Elles vont collecter à chaque tour de l'eau, de la lumière et de la chaleur. Ces trois ressources sont disponibles en abondance dans votre petit jardin. Chaque case contient une ressource, qui sera répartie équitablement à toutes les plantes qui y ont accès.
+
+\textbf{Attention:}\\
+Le quantité de ressources collectées par case sera divisée par la constante COUT\_PAR\_CASE\_COLLECTE arrondie à l'inferieur.
+
+\subsubsection{Les biomes}
+
+\begin{center}
+    \begin{tabular}{c l c}
+      & \textbf{Nom} & \textbf{Ressources} \\
+      \includegraphics[width=0.5cm]{29.png} & Gravier & Aucune \\
+      \includegraphics[width=0.5cm]{09.png} & Prairie & Lumière \\
+      \includegraphics[width=0.5cm]{ocean.png} & Océan & Eau \\
+      \includegraphics[width=0.5cm]{40.png} & Désert & Chaleur \\
+      \includegraphics[width=0.5cm]{54.png} & Oasis & Eau et Chaleur \\
+      \includegraphics[width=0.5cm]{63.png} & Lave & Lumière et Chaleur \\
+      \includegraphics[width=0.5cm]{94.png} & Glace & Eau et Lumière \\
+      \includegraphics[width=0.5cm]{73.png} & Tropical & Eau et Chaleur et Lumière \\
+    \end{tabular}
+\end{center}
+
+\subsection{Reproduction}
+
+Si une case libre est entourée de deux ou plus plantes ayant assez de ressources à leur disposition, une plante poussera sur cette case au prochain tour. Ses statistiques seront la moyenne des statistiques des plantes adjacentes, arrondi au supérieur.
+
+\subsection{Plantes}
+
+Vos plantes sont vos unités de guerre. Que vous choisissiez de les envoyer au combat ou de farouchement les protéger, elles seront à votre service dès leur naissance. Chaque plante dispose de 4 caractéristiques importantes :
+\begin{itemize}
+  \item Sa force physique, qui se traduit par la taille de ses feuilles.
+  \item Sa vie, qui comme vous l'aurez deviné, conduit à sa mort si elle est nulle.
+  \item Son élégance, qui est bien visible à la longueur et la beauté de ses pétales.
+  \item Le rayon de dépotage, communément appelé le rayon de déplacement.
+\end{itemize}
+\vspace{0.3cm}
+
+Lorsqu'une plante naît, elle est encore immature et ne peut pas se reproduire. Elle peut par contre récolter des ressources autour d'elle dans un certain rayon de collecte. Il faudra attendre 3 tours pour qu'elle parvienne à l'âge adulte et puisse engendrer de nouvelles plantes. Hélas, toute chose a une fin, et sa mort inévitable se produira au 10e tour. C'est l'histoire de la vie...
+
+Vos fleurs savent parfaitement bien se débrouiller seules : pour avoir une armée toujours plus grande, leur reproduction est donc automatique. Bien entendu, certaines conditions sont nécessaires : la nouvelle jeune pousse doit être adjacente à ses parents adultes qui doivent disposer de suffisamment de ressources pour lui permettre d'avoir une bonne éducation et grandir tranquillement.
+
+
+\subsection{Actions}
+
+\subsubsection{Arroser}
+
+Pour en faire de vraies machines de guerre, vous pouvez choisir d'offrir une petite amélioration à vos plantes à l'aide d'un petit peu d'amour et d'eau fraîche. Arroser une plante permet d'augmenter de 10 points une caractéristique choisie. Ainsi, vous pouvez augmenter sa force pour lui permettre d'envoyer ses adversaires vers d'autres cieux, sa vie pour la rendre plus résistante, son élégance pour booster votre score... Cependant, prenez garde à ne pas en abuser : vous n'avez l'opportunité de le faire qu'une seule fois par plante, et uniquement si elle est déjà assez mature et rend adulte la plante. Un petit bonus de temps en temps, ça ne fait de mal à personne, sauf aux Tafili.
+
+\subsubsection{Se déplacer}
+Afin d'écraser votre adversaire, il vous sera utile de savoir dépoter vos plantes. En effet, celles-ci naissent dans un petit pot, proche de leurs parents. Mais, une fois mises en terre, elles seront immobilisées pour le reste de leur vie. Choisissez bien vos déplacements pour conquérir l'intégralité du jardin !
+
+\textbf{Attention:}\\
+La distance de déplacement maximale sera le rayon de déplacement de la plante divisée par la constante COUT\_PAR\_CASE\_DEPOTAGE arrondie à l'entier inférieur.
+
+\subsubsection{Baffer}
+Cet affrontement ne s'appellerait pas la bataille des Baffles Fleuries sans un peu de violence. Pour envoyer sur les roses certains de vos adversaires, et donc réduire leurs points de vie, vous aurez l'opportunité de les baffer. Attention pourtant, la portée maximale d'une attaque n'est que de 6 cases. Vous me direz, c'est bien suffisant pour les mettre en déroute... La plante attaqué perds autant de point de vie que la force de la plante qui attaque.
+
+\subsection{Jeu de chien !}
+%Je ne sais pas ce que tu fais là mais tu es adorable et tu remues la queue. Chien de ce jeu, tu mérites ta section
+Pour t'aider dans cette lutte et t'aider à débuger, des chiens vont te rejoindre. Ils n'ont aucune incidence sur le jeu, mais tu peux leur dire de se poster sur une parcelle du jardin et ils y resteront jusqu'à leur prochaine instruction. Tu peux appeler autant de chiens de débugs que tu le souhaites et de 3 races différentes: les fleurs bleues, ceux qui ont la main verte et les autres qui voient rouge.
+
+\subsection{À la guerre comme à la guerre}
+Vous êtes tout de même des plantes civilisées qui n'aiment pas le désordre et le chahut, c'est pourquoi la bataille se déroule au tour par tour. Néanmoins, puisqu'il faut bien y avoir un vainqueur, il a été décidé entre les deux camps que les hostilités prendraient fin au 100e tour. À ce moment, le jardinier avec le plus haut score d'élégance l'emporte.
